@@ -19,7 +19,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr key={index}>
+            <tr key={index} className="hover:bg-gray-100">
               {Object.values(row).map((value, i) => (
                 <td key={i} className="py-2 px-4 border-b border-gray-200 text-sm text-gray-700">
                   {value}

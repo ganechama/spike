@@ -2,7 +2,7 @@ import React from 'react';
 import Table from '../../components/Table';
 
 const data = [
-  { Name: 'John Doe', Age: 28, Email: 'john@example.com',Sex: 'Male' },
+  { Name: 'John Doe', Age: 28, Email: 'john@example.com',Sex: 'Female' },
   { Name: 'Jane Smith', Age: 34, Email: 'jane@example.com',Sex: 'Male' },
   { Name: 'Sam Green', Age: 45, Email: 'sam@example.com',Sex: 'Male' },
 ];

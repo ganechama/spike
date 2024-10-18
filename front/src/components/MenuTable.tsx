@@ -11,26 +11,36 @@ const MenuTable: React.FC<TableProps> = ({ data, onContextMenu }) => {
       <table className="min-w-full bg-white">
         <thead>
           <tr>
-            {Object.keys(data[0]).map((key) => (
-              <th key={key} className="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">
-                {key}
-              </th>
-            ))}
+            {Object.keys(data[0]).map((key) => {
+              if (key === 'id') {
+                return null;
+              }
+              return (
+                <th key={key} className="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">
+                  {key}
+                </th>
+              );
+            })}
             <th className="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">Actions</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
             <tr key={index} className="hover:bg-gray-100">
-              {Object.values(row).map((value, i) => (
-                <td
-                  key={i}
-                  className="py-2 px-4 border-b border-gray-200 text-sm text-gray-700"
-                  onContextMenu={(event) => onContextMenu(event, row)}
-                >
-                  {value}
-                </td>
-              ))}
+              {Object.values(row).map((value, i) => {
+                if (Object.keys(row)[i] === 'id') {
+                  return null;
+                }
+                return (
+                  <td
+                    key={i}
+                    className="py-2 px-4 border-b border-gray-200 text-sm text-gray-700"
+                    onContextMenu={(event) => onContextMenu(event, row)}
+                  >
+                    {value}
+                  </td>
+                );
+              })}
               <td
                 className="py-2 px-4 border-b border-gray-200 text-sm text-gray-700"
                 onContextMenu={(event) => onContextMenu(event, row)}
@@ -51,3 +61,4 @@ const MenuTable: React.FC<TableProps> = ({ data, onContextMenu }) => {
 };
 
 export default MenuTable;
+

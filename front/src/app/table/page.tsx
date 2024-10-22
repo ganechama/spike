@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../../components/Navbar';
 import Table from '../../components/Table';
 
 const data = [
@@ -10,6 +11,7 @@ const data = [
 const Home: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
+      <Navbar />
       <h1 className="text-2xl font-bold mb-4">User Data</h1>
       <Table data={data} />
     </div>
@@ -17,3 +19,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

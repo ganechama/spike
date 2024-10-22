@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # docker
 https://qiita.com/mitarashi777/items/74f850443a1d90c4c069
 
+https://qiita.com/sobameshi0901/items/48c054662091e2441ea1

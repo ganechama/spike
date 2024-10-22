@@ -9,8 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary': '#333',
+        'secondary': '#f7f7f7',
+      },
+      spacing: {
+        '4xl': '20px',
+      },
+      borderRadius: {
+        'lg': '4px',
+      },
+      fontFamily: {
+        'sans': ['Open Sans', 'sans-serif'],
       },
     },
   },

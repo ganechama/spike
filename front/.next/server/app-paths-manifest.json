@@ -1,6 +1,3 @@
 {
-  "/menutable/page": "app/menutable/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/sampledata/route": "app/api/sampledata/route.js",
   "/table/page": "app/table/page.js"
 }
